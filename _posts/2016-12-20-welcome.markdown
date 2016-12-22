@@ -1,0 +1,22 @@
+---
+layout: post
+title: "A new journey begins."
+date: 2016-12-20
+categories:
+  - Misc
+  - Me
+description: A new journey begins.
+image: /assets/image/welcome/welcome.jpg
+image-sm: /assets/image/welcome/welcome.jpg
+---
+### Hi folks! ☺️
+
+It's my desire for a long time to create a blog that can share my knowledge about what I have been researching or things that I am interested in, i.e software development, news, or even games, to people all around the world including you who are reading my blog！
+
+So here it is! ✌️✌️✌️
+
+I will try my best to update the blog frequently as I'm busy pursuing my further education dream right now. Please stay tune and keep supporting me by reading my posts and leaving comments (upcoming feature!).
+
+I'll put my info at the end of every post so you can easily find and contact me 👇👇👇
+
+Thank all of you!
