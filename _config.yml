@@ -15,7 +15,7 @@ default_img:
 # Profile settings
 name: Thinh name
 profile_img: /assets/image/profile/profile.png
-profile: My name is <b>Ngo Tan Thinh</b>. I was born in 1992, Ho Chi Minh city, South of Vietnam.I have more than one-year work experience in web development and I'm now digging to be a full-stack developer. You can find my info and contact below.
+profile: My name is <b>Tan Thinh Ngo</b>. I was born in 1992, Ho Chi Minh city, South of Vietnam.I have more than one-year work experience in web development and I'm now digging to be a full-stack developer. You can find my info and contact below.
 social:
   github: https://github.com/titango
   facebook: https://www.facebook.com/tanthinh0292
