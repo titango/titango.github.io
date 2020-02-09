@@ -1,5 +1,5 @@
 title: Tan Thinh Ngo - A personal tech blog
-logo:  # you can add own logo.
+logo: 'logo.png' # you can add own logo.
 description: Passionate designer curating designs for new startups  and  founders  and crafts  beautiful user interfaces with love.
 # baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -16,8 +16,8 @@ author:
 
 # Contact links
 contact:
-  - name: Twitter
-    link: https://twitter.com/
+  - name: Linkedin
+    link: https://www.linkedin.com/in/tanthinhngo/
   - name: Facebook
     link: https://facebook.com/
   - name: Instagram
@@ -35,9 +35,7 @@ google-analytics: # add your identifier. For example UA-99631805-1.
 # Build settings
 markdown: kramdown
 permalink: pretty
-plugins:
-  - jekyll-sitemap
-  - jekyll/tagging
+paginate: 5
 
 # Pages Path
 defaults:
@@ -64,3 +62,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll/tagging
+  - jekyll-paginate

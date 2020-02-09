@@ -16,14 +16,14 @@
 }
 
 .logo__image {
-  max-height: 50px;
+  max-height: 100px;
 }
 
 .nav__item {
   display: inline-block;
   margin-left: 30px;
   .nav__link {
-    color: $dark;
+    color: $primary-color;
   }
 }
 
