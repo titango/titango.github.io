@@ -283,3 +283,20 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+/* Pagination */
+.pagination {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .pag {
+    box-shadow: 1px 1px 2px 0px #FF1C6B;
+    padding: 10px;
+  }
+
+  .pag_empty {
+    min-width: 130px;
+  }
+}

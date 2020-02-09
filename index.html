@@ -2,23 +2,11 @@
 layout: default
 ---
 
-<!-- <div class="container">
-  <section class="author" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
-    <div class="author__inner">
-  <img src="{{site.baseurl}}{{site.author.image}}" alt="{{site.author.name}}" class="author__img">
-      <h1 class="author__job">{{ site.author.job }}</h1>
-      <p class="author__bio">{{ site.author.bio }}</p>
-      <div class="author__more">
-        <a href="mailto:{{site.author.email}}?subject=Hello%20%F0%9F%91%8B" class="say-hello">Say hello</a>
-        <a href="{{site.baseurl}}/about/" class="know-more">Know More</a>
-      </div>
-    </div>
-  </section>
-</div> -->
-
+<!-- % for post in site.posts % -->
 <div class="container">
+
   {% if site.posts.size > 0 %}
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <div class="article" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
       {% if post.image %}
       <div class="article__image-box">
@@ -38,4 +26,22 @@ layout: default
     </div>
     {% endfor %}
   {% endif %}
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="pag prev_pag">
+        &#60;&#60; Newer posts
+      </a>
+    {% else %}
+      <span class="pag_empty"></span>
+    {% endif %}
+    <span class="page_number">
+      {{ paginator.page }} of {{ paginator.total_pages }}
+    </span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="pag next_pag">Older posts &#62;&#62;</a>
+    {% else %}
+      <span class="pag_empty"></span class="pag_empty">
+    {% endif %}
 </div>
