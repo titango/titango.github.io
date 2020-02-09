@@ -1,7 +1,5 @@
-source "https://rubygems.org"
-
-group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "octopress-autoprefixer"
-end
+source 'https://rubygems.org'
+gem "bundler"
+gem "jekyll"
+gem "jekyll-sitemap"
+gem 'jekyll-tagging'

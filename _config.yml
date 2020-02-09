@@ -1,35 +1,66 @@
-# Site settings
-email: ngotanthinh92@gmail.com
-baseurl: ""
-paginate: 5
-paginate_path: "/blog/page-:num"
-google_analytics:
+title: Tan Thinh Ngo - A personal tech blog
+logo:  # you can add own logo.
+description: Passionate designer curating designs for new startups  and  founders  and crafts  beautiful user interfaces with love.
+# baseurl: "/" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-# SEO settings
-title: Titango's blog
-description:
-url: ""
-twitter_username:
-default_img:
 
-# Profile settings
-name: Thinh name
-profile_img: /assets/image/profile/profile.png
-profile: My name is <b>Tan Thinh Ngo</b>. I was born in 1992, Ho Chi Minh city, South of Vietnam.I have more than one-year work experience in web development and I'm now digging to be a full-stack developer. You can find my info and contact below.
-social:
-  github: https://github.com/titango
-  facebook: https://www.facebook.com/tanthinh0292
-  skype: skype:thinh.tan92?userinfo
+# Author Settings
+author:
+  name: Tan Thinh Ngo
+  image: '/assets/img/myself.jpg'
+  job: Full Stack Software Developer
+  bio: As a software developer, I'm passionate about learning everything related to software development and technologies. I also seek opportunities to build high-quality applications and provide solutions for businesses.
+  email: ngotanthinh92@gmail.com
+
+
+# Contact links
+contact:
+  - name: Twitter
+    link: https://twitter.com/
+  - name: Facebook
+    link: https://facebook.com/
+  - name: Instagram
+    link: https://instagram.com/
+
+
+# Comment Section (Disqus)
+disqus-identifier: mr-brown # add your shortname for Disqus Comment. For example mr-brown
+
+
+# Google Analytics
+google-analytics: # add your identifier. For example UA-99631805-1.
+
 
 # Build settings
-include: ["_categories"]
-exclude: ["_screenshots", "Gemfile", "Gemfile.lock"]
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+  - jekyll/tagging
 
-# Sass
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag-page
+tag_permalink_style:  pretty
+
 sass:
+  sass_dir: _sass
   style: compressed
 
-# Gems
-gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
