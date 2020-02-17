@@ -9,15 +9,20 @@
     {% include google-analytics.html %}
   {% endif %}
 
-  {% include header.html %}
+  <div class="body_wrapper">
+    {% include header.html %}
   
-  <!-- begin content -->
-  <main class="content" aria-label="Content">
-    {{ content }}
-  </main>
-  <!-- end content -->
-
-  {% include footer.html %}
+    <!-- begin content -->
+    <main class="content" aria-label="Content">
+      {{ content }}
+    </main>
+    <!-- end content -->
+    {% unless page.exclude %}
+      
+      {% include footer.html %}
+    {% endunless %}
+  </div>
+  
 
   <!-- begin js -->
   <script src="{{ site.baseurl }}/assets/js/vendors/jquery-3.3.1.min.js"></script>

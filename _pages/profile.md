@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: porfolio
 title: Profile
 permalink: /profile/
 image: '/assets/img/myself.jpg'

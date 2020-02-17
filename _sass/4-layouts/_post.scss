@@ -234,7 +234,7 @@
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
   line-height: 24px;
-  color: $gray-lighten;
+  color: $gray-dark;
   &:after {
     content: ',';
     display: inline-block;
@@ -255,6 +255,10 @@
 .share__item {
   display: inline-block;
   margin-right: 10px;
+}
+
+.share__text {
+  color: $gray-lighten;
 }
 
 .share__link svg {

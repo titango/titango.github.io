@@ -6,3 +6,27 @@
     margin-bottom: 30px;
   }
 }
+
+.body_wrapper
+{
+  width: 50%;
+  margin: auto;
+  background-color: #FFF;
+  opacity: 0.95;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px 1px #ccc;
+}
+
+@media (max-width: $bigdesktop) {
+  .body_wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .body_wrapper {
+    width: 100%;
+  }
+}
+
