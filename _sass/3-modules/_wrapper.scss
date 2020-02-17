@@ -20,13 +20,22 @@
 
 @media (max-width: $bigdesktop) {
   .body_wrapper {
-    width: 70%;
+    width: 80%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .body_wrapper {
+    width: 90%;
   }
 }
 
 @media (max-width: $mobile) {
   .body_wrapper {
     width: 100%;
+  }
+  .body_wrapper, .header {
+    margin-top: 0px !important;
   }
 }
 

@@ -1,6 +1,6 @@
 ---
 layout: porfolio
-title: Profile
+title: my CV
 permalink: /profile/
 image: '/assets/img/myself.jpg'
 ---

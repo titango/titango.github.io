@@ -30,6 +30,13 @@ exclude: true
       {{ content }}
     </div>
 
+    <!-- BACK TO TOP -->
+    <div class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+      <a href="#anchorHeader">Back to top</a>
+    </div>
+
+    <!-- HASH TAGS -->
     {% if page.tags.size >= 1 %}
     <div class="post-tags">
       {% for tag in page.tags %}
