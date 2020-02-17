@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link href = "assets/img/logo_notext.png" rel="icon" type="image/png">
+  <link href = "assets/img/logo.png" rel="icon" type="image/png">
   <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}'>
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
@@ -18,5 +18,8 @@
 
   <!-- Main Stylesheet -->
   <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/545d331302.js" crossorigin="anonymous"></script>
 
 </head>

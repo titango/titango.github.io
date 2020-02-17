@@ -20,10 +20,14 @@
 
 .page-image {
   margin-bottom: 45px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: $gray-white;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
+  // background-color: $gray-white;
   &:after {
     content: '';
     display: table;
