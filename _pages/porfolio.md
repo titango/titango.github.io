@@ -3,21 +3,18 @@ layout: porfolio
 title: Porfolio
 permalink: /porfolio/
 image: '/assets/img/myself.jpg'
+include_author: true
 ---
 
-Hi, my name is Tan Thinh Ngo. I am a Full Stack Web Developer  
+Hi, my name is Tan Thinh Ngo and I have been a Full Stack Web Developer since 2017. I've worked with many companies mostly in the fields such as game, education and transportation industry. I research, design, implement & manage software programs. I also enjoy coding and reading information about technology in my free time. I'm passionate about how future technology can help human greatly regarding health, education and entertainment by using argument reality, artificial intelligence and much more.
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity.
+***
+
+From my perspective, skills can be taught, personality is inherent and I am willing to keep learning, continue challenging myself, and love what I've achieved. Currently, I'm employed full-time at Hawk Eye Logs global technologies in Vancover, Canada with many great current and upcoming projects which excel in transportation industry. These projects aim to provide better solution for citizens in term of fast, safety, and convinience.
 
 ***
 
 > Nothing ever comes to one, that is worth having, except as a result of hard work.
-Read more at https://www.brainyquote.com/topics/hard-work-quotes
 >
 > -- <cite>Booker T. Washington</cite>
 
-***
-
-Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.
-
-Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentialities.

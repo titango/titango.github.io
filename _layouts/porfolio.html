@@ -13,6 +13,7 @@ layout: default
       {% endif %}
     </div> -->
 
+    {% if page.include_author %}
     <div class="container">
       <!-- begin author -->
       <section class="author" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
@@ -30,6 +31,7 @@ layout: default
       </section>
       <!-- end author -->
     </div>
+    {% endif %}
     
 
     <div class="page__content" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-delay="100" data-aos-duration="700">
