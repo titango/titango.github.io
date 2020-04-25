@@ -20,13 +20,13 @@ contact:
   - name: Linkedin
     link: https://www.linkedin.com/in/tanthinhngo/
   - name: Facebook
-    link: https://facebook.com/
+    link: https://www.facebook.com/tanthinh0292/
   - name: Instagram
-    link: https://instagram.com/
+    link: https://www.instagram.com/ngotanthinh92/
 
 
 # Comment Section (Disqus)
-disqus-identifier: mr-brown # add your shortname for Disqus Comment. For example mr-brown
+disqus-identifier: tan # add your shortname for Disqus Comment. For example mr-brown
 
 
 # Google Analytics
@@ -35,6 +35,12 @@ google-analytics: # add your identifier. For example UA-99631805-1.
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class   : 'syntax'
 permalink: pretty
 paginate: 8
 

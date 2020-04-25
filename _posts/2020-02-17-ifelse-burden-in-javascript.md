@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "If/else burden in Javascript"
+title:  "The burden of 'If/Else' in Javascript"
 date:   2020-02-17 18:05:55 +0300
 image:  '/assets/img/language/js-logo.png'
 tags:   [javascript,coding,web programming,tech]
@@ -32,7 +32,7 @@ const buttonClick = (status)=>{
 }
 {% endhighlight %}
 
-The above code simply create a nested If/else statement to do two things (doFunc1 and doFunc2) based on the condition in the IF(or ELSE IF) line. It would be troublesome to maintain such lines of code like this. Instead, normally people will try to use the 'switch' statement.
+The above code simply create a nested If/else statement to do two things (doFunc1 and doFunc2) based on the condition in the IF(or ELSE IF) line. It would be troublesome to maintain such lines of code like this. Instead, normally people will try to use the **switch** statement.
 
 {% highlight javascript %}
 const buttonClick = (status)=>{
@@ -62,5 +62,39 @@ const buttonClick = (status)=>{
       doFunc2('IndexPage')
       break
   }
+}
+{% endhighlight %}
+
+Using the switch statement will make your code look cleaner. If some logic in the cases are similar, we can group them up by combining cases (without using the **break** line).
+
+{% highlight javascript %}
+....
+case 2:
+case 3:
+  doFunc1('archived')
+  doFunc2('archivedPage')
+  break  
+....
+{% endhighlight %}
+
+Surely the switch statement makes our code look much cleaner than using if/else
+But there is a simpler way to write it
+
+{% highlight javascript %}
+const actions = {
+  '1': ['processing','IndexPage'],
+  '2': ['fail','FailPage'],
+  '3': ['fail','FailPage'],
+  '4': ['success','SuccessPage'],
+  '5': ['cancel','CancelPage'],
+  'default': ['other','Index'],
+}
+
+const onButtonClick = (status)=>{
+  let action = actions[status] || actions['default'],
+      logName = action[0],
+      pageName = action[1]
+  sendLog(logName)
+  jumpTo(pageName)
 }
 {% endhighlight %}
