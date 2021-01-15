@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The burden of 'If/Else' in Javascript"
+title:  "Simplify 'If/Else' in Javascript"
 date:   2020-02-17 18:05:55 +0300
 image:  '/assets/img/language/js-logo.png'
 tags:   [javascript,coding,web programming,tech]
@@ -32,6 +32,7 @@ const buttonClick = (status)=>{
 }
 {% endhighlight %}
 
+<br/>
 The above code simply create a nested If/else statement to do two things (doFunc1 and doFunc2) based on the condition in the IF(or ELSE IF) line. It would be troublesome to maintain such lines of code like this. Instead, normally people will try to use the **switch** statement.
 
 {% highlight javascript %}
@@ -39,15 +40,15 @@ const buttonClick = (status)=>{
   switch (status){
     case 1:
       doFunc1('home')
-      doFunc2('homePage')
+      doFunc2('HomePage')
       break
     case 2:
       doFunc1('about')
-      doFunc2('aboutPage')
+      doFunc2('AboutPage')
       break
     case 3:
       doFunc1('archived')
-      doFunc2('archivedPage')
+      doFunc2('ArchivedPage')
       break  
     case 4:
       doFunc1('success')
@@ -65,6 +66,7 @@ const buttonClick = (status)=>{
 }
 {% endhighlight %}
 
+<br/>
 Using the switch statement will make your code look cleaner. If some logic in the cases are similar, we can group them up by combining cases (without using the **break** line).
 
 {% highlight javascript %}
@@ -77,24 +79,30 @@ case 3:
 ....
 {% endhighlight %}
 
+<br/>
 Surely the switch statement makes our code look much cleaner than using if/else
-But there is a simpler way to write it
+.But there is a simpler way to write it
 
 {% highlight javascript %}
 const actions = {
-  '1': ['processing','IndexPage'],
-  '2': ['fail','FailPage'],
-  '3': ['fail','FailPage'],
+  '1': ['home','HomePage'],
+  '2': ['about','AboutPage'],
+  '3': ['archived','ArchivedPage'],
   '4': ['success','SuccessPage'],
   '5': ['cancel','CancelPage'],
-  'default': ['other','Index'],
+  'default': ['other','IndexPage'],
 }
 
 const onButtonClick = (status)=>{
   let action = actions[status] || actions['default'],
       logName = action[0],
       pageName = action[1]
-  sendLog(logName)
-  jumpTo(pageName)
+  doFunc1(logName)
+  doFunc2(pageName)
 }
 {% endhighlight %}
+
+<br/>
+The above modified code looks cleaner and still serve out purpose. We transform the switch statement into a JSON object containing all the options.<br/>
+When the 'onButtonClick' function is triggered, we pull out the matched 'status' from the element inside the 'action' object and pass to other functions.
+
