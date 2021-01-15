@@ -106,3 +106,27 @@ const onButtonClick = (status)=>{
 The above modified code looks cleaner and still serve out purpose. We transform the switch statement into a JSON object containing all the options.<br/>
 When the 'onButtonClick' function is triggered, we pull out the matched 'status' from the element inside the 'action' object and pass to other functions.
 
+<br/>
+Another way to is to use Map instead of Object, we can modify the above code as below:
+
+{% highlight javascript %}
+const actions = new Map([
+  [1, ['home','HomePage']],
+  [2, ['about','AboutPage']],
+  [3, ['archived','ArchivedPage']],
+  [4, ['success','SuccessPage']],
+  [5, ['cancel','CancelPage']],
+  ['default': ['other','IndexPage']],
+])
+
+const onButtonClick = (status)=>{
+  let action = actions.get(status) || actions.get('default')
+  doFunc1(action[0])
+  doFunc2(action[1])
+}
+{% endhighlight %}
+
+Why we use Map ? There are many advantages:
+
+* A Map's key can be any value, meanwhile object can only accept String or symbols.
+* We can easily get the number of key-value pairs by using 'size' attribute. We can still do so with Object but it requires additional step.
