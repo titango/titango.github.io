@@ -6,20 +6,6 @@ image:  '/assets/img/language/jekyll.png'
 tags:   [blog, coding, web programming, tech, ruby ,jekyll]
 ---
 
-<!---
-1. Update Ruby
-   1. `brew install ruby`
-   2. export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-      export GEM_HOME=/opt/homebrew/lib/ruby/gems/3.1.0
-      export GEM_PATH=/opt/homebrew/lib/ruby/gems/3.1.0
-2. Install ruby ffi
-   1. Ruby-FFI is a gem for programmatically loading dynamically-linked native libraries, binding functions within them, and calling those functions from Ruby code. Moreover, a Ruby-FFI extension works without changes on CRuby (MRI), JRuby, Rubinius and TruffleRuby
-   2. `gem install ffi`
-3. I stumbled upon this question when I ran into the issue of trying to set up github pages. It seems that in the latest version of ruby that is installed with homebrew webrick is not included by default
-   1. Install webrick `bundle add webrick`
-4. Update bundle `bundle update`
-5. Run serve `bundle exec jekyll serve`
--->
 ( If you don't know what Jekyll is. I recommend checking out their site [here](https://jekyllrb.com/))<br /><br/>
 I bought a *new 14-inch Macbook Pro* at late 2021 and spent some times to configure and transferred all my previous files into my new mac machine. I didn't have time to run Jekyll again as I was busy working for a long (and complicated) project at my job.<br/> <br/> 
 Later today on weekends, I started pulling Jekyll repo on Github back to make an attempt to write a post about Jest & Testing library with Msw (coming soon! 👌) and I ran into an issue that Jekyll **could't execute bundle and run**.<br/><br/> 
@@ -100,3 +86,19 @@ bundle exec jekyll serve --livereload
 
 <br />
 Hope this post is useful for you and if you have any questions, feel free send an email to me. Cheers.
+
+<!---
+SOURCE COMMENT
+1. Update Ruby
+   1. `brew install ruby`
+   2. export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+      export GEM_HOME=/opt/homebrew/lib/ruby/gems/3.1.0
+      export GEM_PATH=/opt/homebrew/lib/ruby/gems/3.1.0
+2. Install ruby ffi
+   1. Ruby-FFI is a gem for programmatically loading dynamically-linked native libraries, binding functions within them, and calling those functions from Ruby code. Moreover, a Ruby-FFI extension works without changes on CRuby (MRI), JRuby, Rubinius and TruffleRuby
+   2. `gem install ffi`
+3. Update bundle `bundle update`
+4. I stumbled upon this question when I ran into the issue of trying to set up github pages. It seems that in the latest version of ruby that is installed with homebrew webrick is not included by default
+   1. Install webrick `bundle add webrick`
+5. Run serve `bundle exec jekyll serve`
+-->
