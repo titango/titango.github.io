@@ -1,7 +1,7 @@
 ---
 layout: porfolio
-title: my CV
-permalink: /my_cv/
+title: Curricula Vitae (CVs)
+permalink: /curricula_vitae/
 image: '/assets/img/myself.jpg'
 ---
 
