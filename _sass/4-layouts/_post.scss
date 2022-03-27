@@ -302,6 +302,14 @@
   .pag {
     box-shadow: 1px 1px 2px 0px $primary-color;
     padding: 10px;
+    color: #fff;
+    background-color: $primary-color;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .pag:hover {
+    opacity: 0.5;
   }
 
   .pag_empty {
