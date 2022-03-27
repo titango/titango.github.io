@@ -2,10 +2,12 @@
 
 Table of Contents
 -----------------
-*   [About](#about)
-*   [URL](#url)
-*   [Theme](#theme)
-*   [License](#license)
+- [Tan Ngo's personal tech blog.](#tan-ngos-personal-tech-blog)
+  - [Table of Contents](#table-of-contents)
+    - [About](#about)
+    - [URL](#url)
+    - [Theme](#theme)
+    - [License](#license)
 
 * * *
 
@@ -15,15 +17,16 @@ A personal tech blog for myself. I will post what I find interesting when workin
 * * *
 
 ### URL
-Visit titanngo.github.io
+Visit [titanngo.github.io](titanngo.github.io)
 * * *
 
 ### Theme
-Original theme: [Derrick - https://github.com/artemsheludko/derrick#features](https://github.com/artemsheludko/derrick#features)
+Credit to: [Derrick - https://github.com/artemsheludko/derrick#features](https://github.com/artemsheludko/derrick#features)
 
 Changes:
-- Primary color
+- Colors and themes
 - Remove profile block from the homepage and insert to the profile page
+- Added CVs tab on header
 
 * * *
 
