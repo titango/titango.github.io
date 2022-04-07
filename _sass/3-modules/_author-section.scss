@@ -11,10 +11,10 @@
 
 .author__img {
   display: block;
-  max-width: 130px;
-  max-height: 130px;
+  max-width: 230px;
+  max-height: 250px;
   margin: 0 auto 30px;
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: $gray-white;
   transition: opacity 100ms ease;
   &:hover {
