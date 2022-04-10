@@ -56,3 +56,5 @@ become run-time errors.
 **Strong typing** and **weak typing.** JavaScript is weakly typed. JavaScript provides two equality operators: ==, which checks whether two values are equal, and ===, which checks both that the values and the type of the values are equal
 
 **Type inference**: In some cases, the compiler can infer the type of a variable or a function without us having to specify it explicitly.
+
+# Chapter 2: Basic types
