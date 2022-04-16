@@ -20,7 +20,15 @@ layout: default
         <div class="article__meta">
           <span class="article__date">Published <time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
         </div>
-        <p class="article__excerpt">
+         <!-- HASH TAGS -->
+          {% if post.tags.size >= 1 %}
+          <div class="article__tags">
+            {% for tag in post.tags %}
+            <a href="{{ site.baseurl }}/tag/{{ tag }}" class="article__tags_link">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        <p class="article__except">
           {% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 200 }}
           {% endif %}<a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Continue reading</a></p>
         

@@ -3,7 +3,7 @@ layout: post
 title:  "Simplify 'If/Else' in Javascript"
 date:   2020-02-17 18:05:55 +0300
 image:  '/assets/img/language/js-logo.png'
-tags:   [javascript,coding,web programming,tech]
+tags:   [javascript,coding,web_programming,tech]
 ---
 
 When developing in Javascript, we usually use if/else statement to solve simple conditional logic. The statement executes a block of code if a specified condition is true. If the condition is false, another block of code can be executed. That's what we already know right !!! What will happen if we encounter the situation of complex conditional logic like below:

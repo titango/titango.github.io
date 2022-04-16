@@ -3,7 +3,7 @@ layout: post
 title:  "Running Jekyll on MacOs M1"
 date:   2022-03-26 12:00:00 +0300
 image:  '/assets/img/language/jekyll.png'
-tags:   [blog, coding, web programming, tech, ruby ,jekyll]
+tags:   [blog, coding, web_programming, tech, ruby ,jekyll]
 ---
 
 ( If you don't know what Jekyll is. I recommend checking out their site [here](https://jekyllrb.com/))<br /><br/>
