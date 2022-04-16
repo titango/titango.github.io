@@ -162,6 +162,7 @@ efficient access. Reference types allow us to split a data structure across mult
 3. Fixed-size arrays represent a contiguous range of memory that contains several values of the same type. An array of five 32-bit integers, for example, is a range of 160 bits (5 * 32) in which the first 32 bits store the first number, the second 32 bits store the next, and so on.
 
 4. Arrays are commonly used compared to the opposed alternative, linked list, as it’s fast to access due to the space allocated continuously.
+![figure 1.2.png](/assets/img/programming_with_types/figure%201.2.png)
 
 5. **Reference types** hold pointers to objects. The value of a reference type—the actual
 bits of a variable—do not represent the content of an object, but where the object can
@@ -173,6 +174,7 @@ be found
 
 2. One option is to represent a binary tree as an array. The first level of the tree,
 the root, has at most one node. The second level of the tree has at most two nodes: the children of the root. The third level has at most four nodes: the children of the previous two nodes and so on
+![figure 1.3.png](/assets/img/programming_with_types/figure%201.3.png)
 
 3. This is not very efficient as the array has fixed size and as the tree is growing, we need to allocate space, such as doubling size, to make room for all the possible new nodes.
 
