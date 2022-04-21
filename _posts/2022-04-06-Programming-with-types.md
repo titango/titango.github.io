@@ -3,7 +3,7 @@ layout: post
 title:  "Programming With Types (Part 1)"
 date:   2022-04-06 00:00:00 +0900
 image:  '/assets/img/programming_with_types/cover.png'
-tags:   [book,typescript,OOP]
+tags:   [book,typescript]
 ---
 
 One of the book I've read recently is called Programming With Types from Vlad Riscutia published by Manning Publications. <br /> <br />
@@ -58,6 +58,11 @@ become run-time errors.
 **Type inference**: In some cases, the compiler can infer the type of a variable or a function without us having to specify it explicitly.
 
 # Chapter 2: Basic types
+
+This chapter will look at some of the commonly available primitive types
+(empty, unit, Booleans, numbers, strings, arrays, and references), their uses, and
+common pitfalls to be aware of
+
 ### Designing functions that don't  return values
 
 1. An **empty type** is a type that cannot have any value: its set of possible
@@ -76,7 +81,7 @@ also called **actions** or **consumers.**
 1. The canonical two-valued type, available in most programming languages, is the **Boolean type.** Some type systems provide Booleans as a built-in type with values **true** and **false**. Other systems rely on numbers, considering **0** to mean false and any other number to mean true. **TypeScript** has a built-in boolean type with possible values **true** and **false**.
 
 2. Many programming languages use the following symbols for common Boolean operations: && for **AND**, || for **OR**, and ! for **NOT**. Boolean expressions are usually described with truth tables  
-![figure 1.1.png](/assets/img/programming_with_types/figure%201.1.png)
+![figure 2.1.png](/assets/img/programming_with_types/figure%202.1.png)
   
 3. Short circuit evaluation <br />
   
@@ -162,7 +167,7 @@ efficient access. Reference types allow us to split a data structure across mult
 3. Fixed-size arrays represent a contiguous range of memory that contains several values of the same type. An array of five 32-bit integers, for example, is a range of 160 bits (5 * 32) in which the first 32 bits store the first number, the second 32 bits store the next, and so on.
 
 4. Arrays are commonly used compared to the opposed alternative, linked list, as it’s fast to access due to the space allocated continuously.
-![figure 1.2.png](/assets/img/programming_with_types/figure%201.2.png)
+![figure 2.2.png](/assets/img/programming_with_types/figure%202.2.png)
 
 5. **Reference types** hold pointers to objects. The value of a reference type—the actual
 bits of a variable—do not represent the content of an object, but where the object can
@@ -174,7 +179,7 @@ be found
 
 2. One option is to represent a binary tree as an array. The first level of the tree,
 the root, has at most one node. The second level of the tree has at most two nodes: the children of the root. The third level has at most four nodes: the children of the previous two nodes and so on
-![figure 1.3.png](/assets/img/programming_with_types/figure%201.3.png)
+![figure 2.3.png](/assets/img/programming_with_types/figure%202.3.png)
 
 3. This is not very efficient as the array has fixed size and as the tree is growing, we need to allocate space, such as doubling size, to make room for all the possible new nodes.
 

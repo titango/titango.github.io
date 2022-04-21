@@ -18,7 +18,7 @@ layout: default
           <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
         </h2>
         <div class="article__meta">
-          <span class="article__date">Published <time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
+          <span class="article__date">Published on <time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
         </div>
          <!-- HASH TAGS -->
           {% if post.tags.size >= 1 %}
