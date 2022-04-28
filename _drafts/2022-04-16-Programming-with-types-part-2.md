@@ -96,12 +96,139 @@ It's obviously to combine types by **grouping** them to form a new types. An exa
         }
       }
     ```
-    
+
 ### Expressing either-or with types
 
 Another fundamental way in
 which we can combine types is either-or, in which a value is any one of a possible set of
 values of one or more underlying types
+
+1. Enumerations
+
+    We can present a number of day in a week using enum type such as 
+    ```javascript
+    enum DayOfWeek {
+      Sunday,
+      Monday,
+      Tuesday,
+      Wednesday,
+      Thursday,
+      Friday,
+      Saturday
+    }
+    ```
+    This has the advantage as Countries such as the United States, Canada, and Japan consider Sunday to be the
+    first day of the week, whereas the ISO 8601 standard and most European countries
+    consider Monday to be the first day of the week. With this approach, there is no ambiguity about what is Monday and what is Sunday,
+    as they are spelled out in the code.
+
+2. Optional Types
+
+    An **optional type**, also known as a maybe type, represents an
+    optional value of another type T. An instance of the optional type can hold a
+    value (any value) of type T or a special value indicating the absence of a value
+    of type T.
+
+3. Variants
+
+    **Variant types**, also known as tagged union types, contain a value
+    of any number of underlying types. Tagged comes from the fact that even if
+    the underlying types have overlapping values, we are still able to tell exactly
+    which type the value comes from.
+
+    Let's take a look at an example. Here we have 3 classes preresent 3 shapes: **Point**, **Circle**, and **Rectangle**.
+    These classes have a readonly `kind` string to represent their types.
+
+    ```javascript
+    class Point {
+      readonly kind: string = "Point";
+      x: number = 0;
+      y: number = 0;
+    }
+    
+    class Circle {
+      readonly kind: string = "Circle";
+      x: number = 0;
+      y: number = 0;
+      radius: number = 0;
+    }
+
+    class Rectangle {
+      readonly kind: string = "Rectangle";
+      x: number = 0;
+      y: number = 0;
+      width: number = 0;
+      height: number = 0;
+    }
+    ```
+
+    If we want to group into an array called `Shape` including all these classes object. We can do the followings:
+
+    ```javascript
+    type Shape = Point | Circle | Rectangle;
+    let shapes: Shape[] = [new Circle(), new Rectangle()];
+    ```
+    
+    And then we iterate over the shapes and check the kind property of each. 
+    Let’s implement a simple variant that can store a value of up to three types and
+    keep track of the actual type stored based on a type index.
+
+    ```javascript
+    class Variant<T1, T2, T3> {
+      readonly value: T1 | T2 | T3;
+      readonly index: number;
+      private constructor(value: T1 | T2 | T3, index: number) {
+        this.value = value;
+        this.index = index;
+      }
+      static make1<T1, T2, T3>(value: T1): Variant<T1, T2, T3> {
+        return new Variant<T1, T2, T3>(value, 0);
+      }
+      static make2<T1, T2, T3>(value: T2): Variant<T1, T2, T3> {
+        return new Variant<T1, T2, T3>(value, 1);
+      }
+      static make3<T1, T2, T3>(value: T3): Variant<T1, T2, T3> {
+        return new Variant<T1, T2, T3>(value, 2);
+      }
+    }
+    ```
+
+    We can safely remove the `kind` readonly attribute, and we can take a look at the following code to how declare an array of shapes
+
+    ```javascript
+    type Shape = Variant<Point, Circle, Rectangle>;
+    let shapes: Shape[] = [
+      Variant.make2(new Circle()),
+      Variant.make3(new Rectangle())
+    ];
+    for (let shape of shapes) {
+      switch (shape.index) {
+        case 0:
+          let point: Point = <Point>shape.value;
+          console.log(`Point ${JSON.stringify(point)}`);
+          break;
+        case 1:
+          let circle: Circle = <Circle>shape.value;
+          console.log(`Circle ${JSON.stringify(circle)}`);
+          break;
+        case 2:
+          let rectangle: Rectangle = <Rectangle>shape.value;
+          console.log(`Rectangle ${JSON.stringify(rectangle)}`);
+          break;
+        default:
+          throw new Error();
+      }
+    }
+    ```
+
+    This implementation might not look as though it adds a lot of benefit; we ended up
+    using numeric tags and arbitrarily decided that 0 is a Point and 1 is a Circle. We
+    might also wonder why the book didn’t use a class hierarchy for our shapes, where we have a
+    base method that each type implements instead of switching on tags.
+  
+    For that task, we need to take a look at the visitor design pattern and the ways in
+    which it can be implemented.
+
 ### The visitor pattern
 
 ### Algebraic data types
