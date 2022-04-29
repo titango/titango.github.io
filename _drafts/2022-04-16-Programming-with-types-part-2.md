@@ -226,10 +226,30 @@ values of one or more underlying types
     might also wonder why the book didn’t use a class hierarchy for our shapes, where we have a
     base method that each type implements instead of switching on tags.
   
-    For that task, we need to take a look at the visitor design pattern and the ways in
+    For that task, we can take a look at the visitor design pattern and the ways in
     which it can be implemented.
 
-### The visitor pattern
+### The visitor pattern 
+    
+  Since this pattern can be covered online, I recommend you to research to learn more about this pattern by yourself.
+  An example would be on [TutorialsPoint](https://www.tutorialspoint.com/design_pattern/visitor_pattern.html)
 
 ### Algebraic data types
 
+  Algebraic data types (ADTs) are ways to combine types within a type system. ADTs provide two ways to combine types: **product types** and **sum types**.
+
+1. Product types
+
+    Product types are what they called compound types in the book's chapter. Tuples and records are
+    product types because their values are products of their composing types. The types
+    A = {a1, a2} (type A with possible values a1 and a2) and B = {b1, b2} (type B with
+    possible values b1 and b2) combine into the tuple type <A, B> as A x B = {(a1, b1),
+    (a1, b2), (a2, b1), (a2, b2)}.
+
+
+2. Sum types
+
+    Sum types are what they called either-or types earlier in the chapter. They combine types
+    by allowing a value from any one of the types, but only one of them. The types
+    A = {a1, a2} and B = {b1, b2} combine into the sum type A | B as A + B = {a1, a2,
+    b1, b2}.
