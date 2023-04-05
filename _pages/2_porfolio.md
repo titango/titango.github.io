@@ -10,7 +10,7 @@ Hi, my name is Tan Thinh Ngo and I have been a Full Stack Web Developer since 20
 
 ***
 
-From my perspective, skills can be taught, personality is inherent and I am willing to keep learning, continue challenging myself, and love what I've achieved. Currently, I'm employed full-time at Hawk Eye Logs global technologies in Vancover, Canada with many great current and upcoming projects which excel in transportation industry. These projects aim to provide better solution for citizens in term of fast, safety, and convinience.
+From my perspective, skills can be taught, personality is inherent and I am willing to keep learning, continue challenging myself, and love what I've achieved. Currently, I'm looking for a full-time job as a Senior Software Developer proficient in Typescript, React.js, Node.js and Python.  
 
 ***
 
